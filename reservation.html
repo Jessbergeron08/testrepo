@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Restaurant ChiChi</title>
+    <meta name="description" content="Exercice sur les media queries (responsive)">
+
+    <!-- Balise meta à utiliser pour gérer l'affichage sur les appareils mobile, tablette, etc. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Manrope:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex-between">
+                <div class="navbar-logo logo-container">
+                    <a href="index.html">
+                        <img src="img/LogoChihi.svg" alt="logo restaurant chichi" width="200">
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item"><a href="index.html">Accueil</a></li>
+                    <li class="navbar-item"><a href="reservation.html">Réservation</a></li>
+                    <li class="navbar-item"><a href="restaurant.html">Restaurant</a></li>
+                    <li class="navbar-item-special"><a href="commande.html">Ma commande</a></li>
+                </ul>
+                <button class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main class="container">
+        <h1 class="marg-top-big">Réserver</h1>
+        <form action="confirmation.html">
+
+            <div class="grid-4-col marg-top-big">
+                <div>
+                    <label for="prenom">Prénom<sup>*</sup></label>
+                    <input type="text" name="prenom" id="prenom" class="champs-large" placeholder="Entrez votre prénom"
+                        required>
+                </div>
+
+                <div>
+                    <label for="nom">Nom<sup>*</sup></label>
+                    <input type="text" name="nom" id="nom" class="champs-large" placeholder="Entrez votre nom" required>
+                </div>
+
+                <div>
+                    <label for="telephone">Téléphone<sup>*</sup></label>
+                    <input type="tel" name="telephone" id="telephone" class="champs-large"
+                        placeholder="Entrez votre numéro" required>
+                </div>
+
+                <div>
+                    <label for="courriel">Courriel</label>
+                    <input type="email" name="courriel" id="courriel" class="champs-large"
+                        placeholder="Entrez votre courriel">
+                </div>
+
+                <div>
+                    <label for="quantite">Personne<sup>*</sup></label>
+                    <input min="1" value="1" type="number" name="personne" id="quantite" class="champs-large" required>
+                </div>
+
+                <div>
+                    <label for="date">Date<sup>*</sup></label>
+                    <input type="date" name="date" id="date" class="champs-large" required>
+                </div>
+
+
+                <div>
+                    <label for="heure">Heure<sup>*</sup></label>
+                    <select id="heure" name="heure" class="champs-large" required>
+                        <option value="">Choisissez</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="preference">Préférence<sup>*</sup></label>
+                    <select id="preference" name="preference" class="champs-large" required>
+                        <option value="">Choisissez</option>
+                        <option value="salle">Salle à manger</option>
+                        <option value="terrasse">Terrasse</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="marg-top">
+                <label for="commentaire">Commentaire</label>
+                <textarea id="commentaire" name="commentaire" class="champs-large-2"
+                    placeholder="Vous pouvez entrer un commentaire"></textarea>
+            </div>
+
+            <div class="marg-top">
+                <input type="checkbox" name="infolettre" id="infolettre">
+                <label for="infolettre">M'abonner en l'infolettre</label>
+            </div>
+
+            <div class="txt-right marg-top">
+                <input class="btn1" type="submit" value="Faire une réservation">
+            </div>
+
+        </form>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="flex-between cta">
+
+                <div class="left-section">
+                    <a class="marginright" href="mailto:Jessbergeron.design@gmail.com">
+                        <svg width="22" height="18" viewBox="0 0 22 18">
+                            <path
+                                d="M19.1406 0H2.73438C2.00941 0.000775501 1.31436 0.28911 0.801736 0.801736C0.28911 1.31436 0.000775501 2.00941 0 2.73438V14.4531C0.000775501 15.1781 0.28911 15.8731 0.801736 16.3858C1.31436 16.8984 2.00941 17.1867 2.73438 17.1875H19.1406C19.8656 17.1867 20.5606 16.8984 21.0733 16.3858C21.5859 15.8731 21.8742 15.1781 21.875 14.4531V2.73438C21.8742 2.00941 21.5859 1.31436 21.0733 0.801736C20.5606 0.28911 19.8656 0.000775501 19.1406 0ZM18.4482 4.52295L11.417 9.9917C11.2799 10.0983 11.1112 10.1562 10.9375 10.1562C10.7638 10.1562 10.5951 10.0983 10.458 9.9917L3.42676 4.52295C3.34415 4.46056 3.27476 4.38238 3.22262 4.29295C3.17049 4.20351 3.13665 4.10461 3.12307 4.00198C3.10949 3.89936 3.11644 3.79506 3.14352 3.69514C3.1706 3.59522 3.21727 3.50169 3.28081 3.41996C3.34435 3.33824 3.4235 3.26996 3.51366 3.21909C3.60382 3.16822 3.70319 3.13577 3.806 3.12364C3.9088 3.1115 4.013 3.11992 4.11252 3.1484C4.21205 3.17689 4.30492 3.22486 4.38574 3.28955L10.9375 8.38525L17.4893 3.28955C17.6531 3.16583 17.859 3.11157 18.0626 3.1385C18.2661 3.16543 18.4508 3.27139 18.5768 3.43346C18.7028 3.59553 18.76 3.80069 18.7359 4.00457C18.7119 4.20845 18.6085 4.39467 18.4482 4.52295Z" />
+                        </svg>
+
+
+                    </a>
+                    <p>Réalisé par: Jessika Bergeron</p>
+                </div>
+                <div class="right-section">
+                    <p>Réseaux sociaux:</p>
+                    <div class="marginleft">
+                        <a href="https://www.facebook.com/people/Chi-Chi/100083396106261/?paipv=0&eav=AfZ8ftB0uDzk3hSEQz4VGlF07QN7J_4Kr0M8ZdW8fJJTFJMtH30m3uK2ChDq9q7GXsg&_rdr"
+                            class="marginleft">
+                            <svg width="25" height="25" viewBox="0 0 25 25">
+                                <path
+                                    d="M25 12.5762C25 5.6293 19.4031 -0.00195312 12.5 -0.00195312C5.5937 -0.000390625 -0.00317383 5.6293 -0.00317383 12.5777C-0.00317383 18.8543 4.5687 24.0574 10.5437 25.0012V16.2121H7.37183V12.5777H10.5468V9.8043C10.5468 6.65273 12.414 4.91211 15.2687 4.91211C16.6375 4.91211 18.0671 5.15742 18.0671 5.15742V8.25117H16.4906C14.939 8.25117 14.4546 9.22148 14.4546 10.2168V12.5762H17.9203L17.3671 16.2105H14.4531V24.9996C20.4281 24.0559 25 18.8527 25 12.5762Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/chichifoods" class="marginleft">
+                            <svg width="25" height="25" viewBox="0 0 25 25">
+                                <path
+                                    d="M0 1.79063C0 0.801563 0.821875 0 1.83594 0H23.1641C24.1781 0 25 0.801563 25 1.79063V23.2094C25 24.1984 24.1781 25 23.1641 25H1.83594C0.821875 25 0 24.1984 0 23.2094V1.79063ZM7.72344 20.9281V9.63906H3.97188V20.9281H7.72344ZM5.84844 8.09688C7.15625 8.09688 7.97031 7.23125 7.97031 6.14687C7.94687 5.03906 7.15781 4.19688 5.87344 4.19688C4.58906 4.19688 3.75 5.04062 3.75 6.14687C3.75 7.23125 4.56406 8.09688 5.82344 8.09688H5.84844ZM13.5172 20.9281V14.6234C13.5172 14.2859 13.5422 13.9484 13.6422 13.7078C13.9125 13.0344 14.5297 12.3359 15.5672 12.3359C16.925 12.3359 17.4672 13.3703 17.4672 14.8891V20.9281H21.2188V14.4531C21.2188 10.9844 19.3687 9.37187 16.9 9.37187C14.9094 9.37187 14.0172 10.4656 13.5172 11.2359V11.275H13.4922C13.5005 11.262 13.5088 11.2489 13.5172 11.2359V9.63906H9.76719C9.81406 10.6984 9.76719 20.9281 9.76719 20.9281H13.5172Z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/ChichiFood/with_replies" class="marginleft">
+                            <svg width="25" height="25" viewBox="0 0 25 25">
+                                <path
+                                    d="M7.85313 23.4376C17.2875 23.4376 22.4484 15.6204 22.4484 8.85323C22.4484 8.63448 22.4484 8.41261 22.4391 8.19386C23.4438 7.46649 24.311 6.56597 25 5.53448C24.0614 5.94831 23.0668 6.22105 22.0484 6.34386C23.1211 5.70267 23.9246 4.69381 24.3094 3.50479C23.3015 4.10186 22.1985 4.521 21.0484 4.74386C20.2753 3.92046 19.2522 3.37498 18.1376 3.19192C17.0231 3.00885 15.8793 3.19842 14.8833 3.73126C13.8874 4.2641 13.095 5.11046 12.6288 6.13926C12.1626 7.16806 12.0487 8.32188 12.3047 9.42198C10.2652 9.31972 8.27003 8.7899 6.4485 7.86689C4.62698 6.94388 3.01982 5.6483 1.73125 4.06417C1.07709 5.19399 0.877459 6.53042 1.17288 7.80208C1.46831 9.07375 2.23665 10.1853 3.32187 10.911C2.50866 10.8834 1.71331 10.665 1 10.2735V10.3439C1.0014 11.5274 1.41142 12.6742 2.16074 13.5904C2.91006 14.5065 3.95273 15.1358 5.1125 15.372C4.67229 15.4933 4.21755 15.5537 3.76094 15.5517C3.43904 15.5526 3.11778 15.5228 2.80156 15.4626C3.12935 16.4814 3.76761 17.3722 4.62695 18.0102C5.48628 18.6482 6.52365 19.0014 7.59375 19.0204C5.77587 20.4482 3.53031 21.2226 1.21875 21.2189C0.811439 21.2206 0.404411 21.1971 0 21.1485C2.34612 22.6443 5.07078 23.4385 7.85313 23.4376Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/chichidining/" class="marginleft">
+                            <svg width="25" height="25" viewBox="0 0 25 25">
+
+                                <path
+                                    d="M12.5 0C9.10781 0 8.68125 0.015625 7.34844 0.075C6.01562 0.1375 5.10781 0.346875 4.3125 0.65625C3.47827 0.97003 2.72264 1.46223 2.09844 2.09844C1.46262 2.72296 0.97048 3.4785 0.65625 4.3125C0.346875 5.10625 0.135937 6.01562 0.075 7.34375C0.015625 8.67969 0 9.10469 0 12.5016C0 15.8953 0.015625 16.3203 0.075 17.6531C0.1375 18.9844 0.346875 19.8922 0.65625 20.6875C0.976562 21.5094 1.40313 22.2062 2.09844 22.9016C2.79219 23.5969 3.48906 24.025 4.31094 24.3438C5.10781 24.6531 6.01406 24.8641 7.34531 24.925C8.67969 24.9844 9.10469 25 12.5 25C15.8953 25 16.3188 24.9844 17.6531 24.925C18.9828 24.8625 19.8938 24.6531 20.6891 24.3438C21.5228 24.0298 22.2778 23.5376 22.9016 22.9016C23.5969 22.2062 24.0234 21.5094 24.3438 20.6875C24.6516 19.8922 24.8625 18.9844 24.925 17.6531C24.9844 16.3203 25 15.8953 25 12.5C25 9.10469 24.9844 8.67969 24.925 7.34531C24.8625 6.01563 24.6516 5.10625 24.3438 4.3125C24.0296 3.47848 23.5374 2.72293 22.9016 2.09844C22.2775 1.46199 21.5219 0.969758 20.6875 0.65625C19.8906 0.346875 18.9813 0.135937 17.6516 0.075C16.3172 0.015625 15.8938 0 12.4969 0H12.5016H12.5ZM11.3797 2.25312H12.5016C15.8391 2.25312 16.2344 2.26406 17.5516 2.325C18.7703 2.37969 19.4328 2.58437 19.8734 2.75469C20.4562 2.98125 20.8734 3.25312 21.3109 3.69062C21.7484 4.12813 22.0188 4.54375 22.2453 5.12813C22.4172 5.56719 22.6203 6.22969 22.675 7.44844C22.7359 8.76562 22.7484 9.16094 22.7484 12.4969C22.7484 15.8328 22.7359 16.2297 22.675 17.5469C22.6203 18.7656 22.4156 19.4266 22.2453 19.8672C22.0449 20.4099 21.725 20.9007 21.3094 21.3031C20.8719 21.7406 20.4563 22.0109 19.8719 22.2375C19.4344 22.4094 18.7719 22.6125 17.5516 22.6688C16.2344 22.7281 15.8391 22.7422 12.5016 22.7422C9.16406 22.7422 8.76719 22.7281 7.45 22.6688C6.23125 22.6125 5.57031 22.4094 5.12969 22.2375C4.58672 22.0374 4.09551 21.7181 3.69219 21.3031C3.27617 20.9001 2.95582 20.4088 2.75469 19.8656C2.58437 19.4266 2.37969 18.7641 2.325 17.5453C2.26562 16.2281 2.25312 15.8328 2.25312 12.4937C2.25312 9.15625 2.26562 8.7625 2.325 7.44531C2.38125 6.22656 2.58438 5.56406 2.75625 5.12344C2.98281 4.54063 3.25469 4.12344 3.69219 3.68594C4.12969 3.24844 4.54531 2.97813 5.12969 2.75156C5.57031 2.57969 6.23125 2.37656 7.45 2.32031C8.60313 2.26719 9.05 2.25156 11.3797 2.25V2.25312ZM19.1734 4.32812C18.9765 4.32812 18.7814 4.36692 18.5994 4.44231C18.4174 4.51769 18.2521 4.62818 18.1128 4.76746C17.9735 4.90675 17.863 5.07211 17.7876 5.2541C17.7122 5.43609 17.6734 5.63114 17.6734 5.82812C17.6734 6.02511 17.7122 6.22016 17.7876 6.40215C17.863 6.58414 17.9735 6.7495 18.1128 6.88879C18.2521 7.02807 18.4174 7.13856 18.5994 7.21394C18.7814 7.28933 18.9765 7.32812 19.1734 7.32812C19.5713 7.32812 19.9528 7.17009 20.2341 6.88879C20.5154 6.60748 20.6734 6.22595 20.6734 5.82812C20.6734 5.4303 20.5154 5.04877 20.2341 4.76746C19.9528 4.48616 19.5713 4.32812 19.1734 4.32812ZM12.5016 6.08125C11.6501 6.06797 10.8045 6.2242 10.014 6.54085C9.22353 6.85749 8.50393 7.32824 7.89711 7.92566C7.29029 8.52309 6.80838 9.23526 6.47944 10.0207C6.1505 10.8062 5.98109 11.6492 5.98109 12.5008C5.98109 13.3523 6.1505 14.1954 6.47944 14.9808C6.80838 15.7663 7.29029 16.4785 7.89711 17.0759C8.50393 17.6733 9.22353 18.1441 10.014 18.4607C10.8045 18.7774 11.6501 18.9336 12.5016 18.9203C14.1868 18.894 15.7941 18.2061 16.9765 17.0051C18.159 15.804 18.8217 14.1862 18.8217 12.5008C18.8217 10.8154 18.159 9.19752 16.9765 7.99648C15.7941 6.79545 14.1868 6.10754 12.5016 6.08125ZM12.5016 8.33281C13.6068 8.33281 14.6667 8.77185 15.4482 9.55335C16.2297 10.3349 16.6688 11.3948 16.6688 12.5C16.6688 13.6052 16.2297 14.6651 15.4482 15.4466C14.6667 16.2281 13.6068 16.6672 12.5016 16.6672C11.3964 16.6672 10.3364 16.2281 9.55492 15.4466C8.77342 14.6651 8.33438 13.6052 8.33438 12.5C8.33438 11.3948 8.77342 10.3349 9.55492 9.55335C10.3364 8.77185 11.3964 8.33281 12.5016 8.33281Z" />
+
+
+                            </svg>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom cta">
+                <a class="footertext lien" href="https://formation-mauricie.ca/programme/developpement-web/"
+                    target="_blank">Intégration web 1</a>
+                <div class="footertext">
+                    <a class="lien" href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de Trois-Rivières</a>
+                    <a class="marginleft lien" href="https://www.cegeptr.qc.ca/etudiants-actuels/calendrier/"
+                        target="_blank">Hiver 2023</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
